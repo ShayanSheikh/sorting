@@ -1,7 +1,8 @@
-Array.prototype.swap = function( pos1, pos2 ) {
-  let temp = this[pos1];
-  this[pos1] = this[pos2];
-  this[pos2] = temp;
+function swap( arr, pos1, pos2 ) {
+  let temp = arr[pos1];
+  arr[pos1] = arr[pos2];
+  arr[pos2] = temp;
+  return arr;
 };
 
 function bubbleSort(arr) {
@@ -9,7 +10,7 @@ function bubbleSort(arr) {
   while(count > 0) {
     for(var i = 0; i < count; i++) {
       if ( arr[i] > arr[ i+1 ] ) {
-        arr.swap(i, i+1);
+        arr = swap(arr, i, i+1);
       }
     }
     count--;

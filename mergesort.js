@@ -1,10 +1,6 @@
 function split(wholeArray) {
-  let firstHalf = [];
-  let secondHalf = [];
   let mid = Math.floor(wholeArray.length/2);
-  for(var i = 0; i < mid; i++) firstHalf.push(wholeArray[i])
-  for(var i = mid; i < wholeArray.length; i++) secondHalf.push(wholeArray[i]);
-  return [firstHalf, secondHalf];
+  return [wholeArray.slice(0, mid), wholeArray.slice(mid)];
 }
 
 function merge(arr1,arr2) {
